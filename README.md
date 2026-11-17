@@ -5,13 +5,21 @@ Skill agent AI untuk membuat **video explainer vertikal (TikTok / Reels / Shorts
 Lahir dari pembuatan video "CARA KERJA VSAT", lalu dijadikan generik.
 
 ## Yang dikerjakan agent
+0. **Bertanya dulu** saat kamu mengirim ide (penonton, poin wajib, durasi, gaya, mood musik, referensi) supaya hasilnya akurat.
 1. Membuat **folder baru sesuai judul video** (UPPERCASE) dari template.
-2. Riset fakta lalu menulis **naskah VO per scene + daftar SFX** dan **style prompt TTS** (mis. Gemini TTS) di `NASKAH-VO-SFX.md`.
+2. **Mencari referensi gambar & fakta dari browser** seakurat mungkin (sumber dicatat di `REFERENSI.md`), lalu menulis **naskah VO per scene + daftar SFX** dan **style prompt TTS** (mis. Gemini TTS) di `NASKAH-VO-SFX.md`.
 3. Membangun animasi penuh: **1080x1920, 60 fps**, ilustrasi SVG bergerak, **kinetic text UPPERCASE bold**, full warna, **efek zoom** kamera + transisi zoom-through.
 4. QA dengan still frame, lalu **render preview tanpa audio**.
 5. Kamu menaruh VO → agent **mentranskripsi per kata** (whisper.cpp) untuk menyinkronkan pergantian scene, kinetic text, dan SFX.
-6. **Mensintesis SFX orisinal** (`make_sfx.py`, tanpa aset berhak cipta) dan memixnya 50% di bawah VO.
+6. **Membuat musik latar & SFX sendiri** (`make_music.py`, `make_sfx.py`, tanpa aset berhak cipta); SFX dimix 50% di bawah VO.
 7. **Render final** + menulis **caption TikTok**.
+
+## Pembagian audio
+| Lapisan | Dibuat oleh |
+|---|---|
+| VO (voice over) | **Kamu** (rekam sendiri / TTS dari naskah + style prompt yang dibuat agent) |
+| Musik latar | **Agent** (`make_music.py`) |
+| SFX | **Agent** (`make_sfx.py`) |
 
 ## Isi repo
 ```
@@ -20,7 +28,7 @@ skills/remotion-explainer-video/
   SKILL.md                                 # alur kerja lengkap (format Agent Skills)
   template/                                # proyek Remotion siap salin
     src/        theme, timing, scenes (contoh), text (kinetic text), util (Camera/zoom), audio, Video
-    scripts/    make_sfx.py · transcribe.py · stills.mjs
+    scripts/    make_sfx.py · make_music.py · transcribe.py · stills.mjs
     NASKAH-VO-SFX.md                       # template naskah
 ```
 
@@ -79,6 +87,7 @@ Agent membuat folder `CARA KERJA WIFI/`, menulis naskah + SFX + style prompt TTS
 | `npm run render:preview` | preview tanpa audio → `out/preview.mp4` |
 | `python scripts/transcribe.py public/audio/vo/full.wav` | transkripsi per kata → `.whisper/words.txt` |
 | `npm run sfx` | buat 12 SFX orisinal → `public/audio/sfx/` |
+| `python scripts/make_music.py 60 110 upbeat` | musik latar orisinal → `public/audio/music/bg.wav` |
 | `npm run render` | render final → `out/final.mp4` |
 
 ## Lisensi

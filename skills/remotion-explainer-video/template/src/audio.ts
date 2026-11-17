@@ -1,9 +1,9 @@
 import { getStaticFiles } from "remotion";
 
 // ====== SLOT AUDIO ======
-// VO   : public/audio/vo/full.wav (satu file utuh, disarankan)  ATAU  scene-01.mp3 ... (per scene)
+// VO   : DIBUAT PENGGUNA. public/audio/vo/full.wav (satu file utuh, disarankan)  ATAU  scene-01.mp3 ... (per scene)
 // SFX  : public/audio/sfx/<nama>.wav  (buat otomatis: python scripts/make_sfx.py)
-// MUSIK: public/audio/music/bg.mp3     (opsional, volume kecil)
+// MUSIK: public/audio/music/bg.wav     (buat otomatis: python scripts/make_music.py <detik> <bpm> <mood>)
 // File yang belum ada otomatis dilewati, jadi video tetap bisa dirender tanpa audio.
 
 const EXT = [".mp3", ".wav", ".m4a", ".aac", ".ogg"];

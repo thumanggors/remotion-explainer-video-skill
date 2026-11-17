@@ -3,9 +3,10 @@
 Format: 1080x1920 (9:16), 60 fps, ±{{DURASI}} detik.
 
 ## Cara pasang audio
+VO dibuat **pengguna**; musik & SFX dibuat **agent**.
 - VO: satu file utuh `public/audio/vo/full.wav` (disarankan), atau per scene `public/audio/vo/scene-01.mp3` … (boleh `.wav` / `.m4a`).
 - SFX: dibuat otomatis `python scripts/make_sfx.py` → `public/audio/sfx/*.wav` (dimix 50% di bawah VO).
-- Musik latar (opsional): `public/audio/music/bg.mp3` (volume 12%).
+- Musik latar: dibuat agent `python scripts/make_music.py <detik> <bpm> <mood>` → `public/audio/music/bg.wav` (volume 12%).
 - File yang belum ada otomatis dilewati.
 - Preview: `npm run dev` · Render final: `npm run render` → `out/final.mp4`
 
