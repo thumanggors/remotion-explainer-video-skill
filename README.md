@@ -5,7 +5,7 @@ Skill agent AI untuk membuat **video explainer vertikal (TikTok / Reels / Shorts
 Lahir dari pembuatan video "CARA KERJA VSAT", lalu dijadikan generik.
 
 ## Yang dikerjakan agent
-0. **Bertanya dulu** saat kamu mengirim ide (penonton, poin wajib, durasi, gaya, mood musik, referensi) supaya hasilnya akurat.
+0. **Bertanya dulu** saat kamu mengirim ide (penonton, poin wajib, durasi, gaya, mood musik, referensi), **setiap pertanyaan disertai rekomendasi** agent; cukup balas "ikut rekomendasi" kalau setuju.
 1. Membuat **folder baru sesuai judul video** (UPPERCASE) dari template.
 2. **Mencari referensi gambar & fakta dari browser** seakurat mungkin (sumber dicatat di `REFERENSI.md`), lalu menulis **naskah VO per scene + daftar SFX** dan **style prompt TTS** (mis. Gemini TTS) di `NASKAH-VO-SFX.md`.
 3. Membangun animasi penuh: **1080x1920, 60 fps**, ilustrasi SVG bergerak, **kinetic text UPPERCASE bold**, full warna, **efek zoom** kamera + transisi zoom-through.

@@ -27,16 +27,22 @@ Jangan mengunduh musik/SFX dari internet. Jika pengguna memberi musik sendiri, p
 ## Langkah kerja
 
 ### 0. Klarifikasi ide (tanya dulu sebelum mengerjakan)
-Saat pengguna mengirim ide/topik, **ajukan pertanyaan singkat dalam satu pesan** supaya hasilnya akurat. Tanya hanya yang belum jelas dari pesan pengguna, berikan opsi/default agar mudah dijawab. Contoh:
-1. Target penonton? (awam / pelajar / teknisi)
-2. Sudut pandang atau poin utama yang wajib masuk? Ada yang harus dihindari?
-3. Durasi? (default 60 detik)
-4. Gaya visual & warna? (default: latar gelap full warna, kinetic text UPPERCASE)
-5. Mood musik? (upbeat / calm / tense)
-6. Bahasa & gaya VO? CTA di akhir? (default: "Follow untuk …")
-7. Ada referensi (link, gambar, video contoh, data/angka resmi) yang harus dipakai?
+Saat pengguna mengirim ide/topik, **ajukan pertanyaan singkat dalam satu pesan** supaya hasilnya akurat. Tanya hanya yang belum jelas dari pesan pengguna.
 
-Kalau pengguna menjawab "bebas"/"terserah", pakai default dan sebutkan default yang dipakai. Jangan menebak fakta yang hanya pengguna yang tahu (merek, produk sendiri, data internal).
+**Setiap pertanyaan WAJIB disertai rekomendasi agent** yang disesuaikan dengan topik (bukan default generik), ditulis dengan format:
+`N. <pertanyaan>? Opsi: A / B / C. **Rekomendasi: <pilihan> — <alasan singkat 1 kalimat>**`
+
+Contoh untuk topik "CARA KERJA VSAT":
+1. Target penonton? Opsi: awam / pelajar / teknisi. **Rekomendasi: awam — konten TikTok paling luas jangkauannya, istilah teknis cukup dijelaskan singkat.**
+2. Poin utama yang wajib masuk? **Rekomendasi: komponen terminal → uplink → satelit GEO → hub → latensi — urutan alur data paling mudah diikuti.**
+3. Durasi? Opsi: 30 / 60 / 90 detik. **Rekomendasi: 60 detik — cukup untuk 8–9 scene tanpa terburu-buru.**
+4. Gaya visual & warna? **Rekomendasi: latar luar angkasa gelap + aksen neon — cocok dengan tema satelit dan teks kontras tinggi.**
+5. Mood musik? Opsi: upbeat / calm / tense. **Rekomendasi: upbeat — menjaga energi edukasi tetap cepat.**
+6. CTA di akhir? **Rekomendasi: "Follow untuk penjelasan teknologi lainnya!" — mendorong follow untuk seri berikutnya.**
+7. Ada referensi (link, gambar, data resmi) yang harus dipakai? **Rekomendasi: kalau tidak ada, agent riset sendiri dari sumber resmi (lihat langkah 2).**
+
+Tutup dengan: "Balas 'ikut rekomendasi' kalau semua setuju, atau sebutkan nomor yang mau diubah."
+Kalau pengguna menjawab "bebas"/"terserah"/"ikut rekomendasi", pakai rekomendasi tersebut. Jangan menebak fakta yang hanya pengguna yang tahu (merek, produk sendiri, data internal).
 
 ### 1. Folder baru sesuai judul
 Buat folder baru bernama **judul video dalam UPPERCASE** (mis. `CARA KERJA VSAT`) di direktori kerja video user.
