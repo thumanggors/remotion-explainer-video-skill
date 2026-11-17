@@ -1,0 +1,29 @@
+{
+  "name": "remotion-explainer-video",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "remotion studio",
+    "typecheck": "tsc --noEmit",
+    "sfx": "python scripts/make_sfx.py",
+    "stills": "node scripts/stills.mjs",
+    "render:preview": "remotion render Main out/preview.mp4 --codec h264 --crf 23 --muted",
+    "render": "remotion render Main out/final.mp4 --codec h264 --crf 18 --audio-bitrate 320k"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.535",
+    "@remotion/cli": "4.0.535",
+    "@remotion/google-fonts": "4.0.535",
+    "@remotion/media-utils": "4.0.535",
+    "@remotion/renderer": "4.0.535",
+    "@remotion/transitions": "4.0.535",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.535"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.7",
+    "typescript": "5.9.3"
+  }
+}
